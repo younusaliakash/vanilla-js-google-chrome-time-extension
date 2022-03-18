@@ -1,1 +1,1 @@
-# vanilla-js-google-chrome-time-extension
+# Vanilla JS Google Chrome Time Extension
