@@ -5,10 +5,10 @@ const timerElement = document.getElementById("timer");
 const updateTime = () => {
   chrome.storage.local.get(["timer"], (res) => {
     const time = res.timer ?? 0;
-    timerElement.textContent = `The Timer is at : ${time}`;
+    timerElement.textContent = `${time} Sec`;
   });
   const currentTime = new Date().toLocaleTimeString();
-  timeElement.textContent = `Time is : ${currentTime}`;
+  timeElement.textContent = `${currentTime}`;
 };
 
 updateTime();
@@ -25,9 +25,12 @@ chrome.action.setBadgeText(
 
 chrome.storage.sync.get(["name"], (result) => {
   if (result.name !== undefined) {
-    userName.textContent = `Welcome back ${result.name}`;
+    userName.innerHTML = `<h2 class="welcome_title">Welcome Back</h2>
+                            <h2 class="username">${result.name}</h2>
+     `;
   } else {
-    userName.textContent = `Welcome Back Dear`;
+    userName.innerHTML = `<h2 class="welcome_title">Welcome Back</h2>
+     `;
   }
 });
 

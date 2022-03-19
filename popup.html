@@ -8,13 +8,20 @@
     <link rel="stylesheet" href="popup.css" />
   </head>
   <body>
-    <h1>Timer Extension</h1>
+    <h1 class="extension_name">Timer Extension</h1>
+    <h2 class="current_time_title">Current Time</h2>
     <h2 id="time"></h2>
-    <h2 id="name"></h2>
+    <div id="name"></div>
+    <h2 class="timer_title">Your Timer is at</h2>
     <h2 id="timer"></h2>
-    <button id="start-btn">Start</button>
-    <button id="stop-btn">Stop</button>
-    <button id="reset-btn">Reset</button>
+    <div class="btn_group">
+      <div class="wrapper">
+        <button id="start-btn">Start</button>
+        <button id="stop-btn">Stop</button>
+        <button id="reset-btn">Reset</button>
+      </div>
+    </div>
+    <h4 class="author">Develop By <b>Younus Ali Akash</b></h4>
     <script src="popup.js"></script>
   </body>
 </html>
